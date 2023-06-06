@@ -2,3 +2,21 @@
 "768805383","45","M","3","ensino medio","blue","12691.51","1144.9","42"
 "818770008","49","F","5","mestrado","solteiro","8256.96","1291.45","33"
 "713982108","51","M","3","mestrado","casado","3418.56","1887.72","20"
+
+SQL CODE:
+
+CREATE EXTERNAL TABLE clientes(
+ id BIGINT,
+ idade BIGINT,
+ sexo STRING,
+ dependentes BIGINT,
+ escolaridade STRING,
+ tipo_cartao STRING,
+ limite_credito DOUBLE,
+ valor_transacoes_12m DOUBLE,
+ qtd_transacoes_12m BIGINT)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES ('separatorChar' = ',', 'quoteChar' = '"',
+'escapeChar' = '\\')
+STORED AS TEXTFILE
+LOCATION 's3://bucket-lucas-lima/'
