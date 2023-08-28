@@ -1,31 +1,38 @@
-print("Hello world")
+#VECTOR BASICS
+#VETOR É UMA MATRIZ UNIDIMENSIONAL QUE PODE CONTER ELEMENTOS DE DADOS NUMERICOS LOGICOS E CARACTERES.
+
 nvec <- c(1,2,3,4,5)
 class(nvec)
-#Possuem outros tipo para caracterizar o vetor como "characters"
-cvec <- ("B","R","Z")
-#Possuem outros tipo para caracterizar o vetor como "characters"
-cvec <- ("B","R","Z")
+
 #Possuem outros tipo para caracterizar o vetor como "characters"
 cvec <- c("B","R","Z")
 class(cvec)
-#Possuem outros tipo para caracterizar o vetor como "logicos"
+
+#Possuem outros tipo para caracterizar o vetor como "logical"
 lvec <- c(TRUE, FALSE)
 class(lvec)
+
+#Portanto uma das regras sobre vetores e que voce nao pode misturar tipos de
+#dados nos elementos daquela Matriz vetorial
+
 V <- c(T,12,14)
-v
-v
 V
+#ele retornara o valor 1 no lugar de true pois os demais números sao numericos
+
 #Outro exemplo
 v <- c("BRZ",20,23)
 v
+#Neste caso todos os dados se tornarao "characters".
+
 #Tendo essas informacoes vamos falar sobre os nomes dos vetores.
 #Vamos imaginar que temos vetores de temperatura.
 temps <- c(23,17,25,40,35,12,45)
-names(temps) <- c('dom','seg','tec','qua','qui','sex','sab')
-temps
+
+#Aqui nao tem nada que deixe em evidencia o dia da semana e eu preciso adicionar
+#essa informacao e eu posso fazer isso usando a funcao names()
+
 names(temps) <- c('dom','seg','ter','qua','qui','sex','sab')
 temps
-setwd("C:/Users/LucasPC/Desktop/Projeto Faculdade/CodigosLinguagemR/Data_Analytics")
 #E um metodo importante de nomeacao pois podemos puxar os dados pelo nome depois
 #VECTOR OPERATIONS
 v1 <- c(1,2,3)
@@ -36,21 +43,26 @@ v1 - v2
 v2 - v1
 v2 * v1
 v1 / v2
+
 #Tambem temos alguma funcoes internas uteis que podem ser usadas juto dos vetores
 #Voce tem o nome da sua funcao em parenteses por exemplo
-sum(v1)
+sum(v1)  #ele ira retnorar a soma do vetor.
+
 sum.of.vec <- sum(v1)
 sum.of.vec
-#Podemos checar a media dos vetores
+
+#Podemos checar a media dos vetores 
 mean(v1)
-#Podemos checar o maximo de elementos
+
+#VALOR PARCIAL PADRAO
 sd(v1)
+
 #Podemos checar o maximo de elementos
 max(v1)
 min(v1)
-#
-sd(v1)
+
 #Podemos retornar todo o produto de todos os elementos no vetor
 prod(v1)
 prod(v2)
-save.image("C:/Users/LucasPC/Desktop/Projeto Faculdade/CodigosLinguagemR/Data_Analytics/VectorBasicsOne.RdataR.RData")
+
+# END
