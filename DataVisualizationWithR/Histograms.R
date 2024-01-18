@@ -13,3 +13,5 @@ pl3 <- pl2 + xlab('Movie Rating') + ylab('Count')
 pl3
 
 print(pl3 + ggtitle("Movies Histogram"))
+
+
